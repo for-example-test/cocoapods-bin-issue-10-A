@@ -31,11 +31,13 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
 
   s.subspec 'Core' do |ss|
-    ss.source_files = ['Classes/A.{h,m}']
+    ss.vendored_frameworks = "#{s.name}.framework"
+    ss.source_files = "#{s.name}.framework/Headers/*", "#{s.name}.framework/Versions/A/Headers/*"
+    ss.public_header_files = "#{s.name}.framework/Headers/*", "#{s.name}.framework/Versions/A/Headers/*"
   end
 
   s.subspec 'Sub' do |ss|
-    ss.source_files = ['Classes/AS.{h,m}']
+    ss.dependency 'A/Core'
   end
   # s.resource_bundles = {
   #   'cocoapods-bin-issue-10-A' => ['cocoapods-bin-issue-10-A/Assets/*.png']

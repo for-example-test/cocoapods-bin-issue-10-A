@@ -1,0 +1,16 @@
+PODS:
+  - cocoapods-bin-issue-10-A (0.1.0)
+
+DEPENDENCIES:
+  - cocoapods-bin-issue-10-A (from `../`)
+
+EXTERNAL SOURCES:
+  cocoapods-bin-issue-10-A:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  cocoapods-bin-issue-10-A: 070c1fb758b17e13471b5792ac642e41208177b4
+
+PODFILE CHECKSUM: 817d517a87eecaa792b80f403426b3a80abf2b3b
+
+COCOAPODS: 1.7.3
